@@ -5,8 +5,8 @@ import { MeteorDemo } from "./ui/Meteor";
 import "@/app/contact/style.css";
 
 function ContactPage() {
-  const api_key = process.env.NEXT_PUBLIC_KEY_EMAIL;
-  const url = process.env.NEXT_PUBLIC_URL_SEND;
+  const api_key = process.env.KEY_EMAIL;
+  const url = process.env.URL_SEND;
 
   // State untuk mengontrol nilai input
   const [name, setName] = useState("");
