@@ -6,7 +6,6 @@ import "@/app/contact/style.css";
 
 function ContactPage() {
   const api_key = process.env.KEY_EMAIL;
-  const url = process.env.URL_SEND;
 
   // State untuk mengontrol nilai input
   const [name, setName] = useState("");
@@ -15,24 +14,14 @@ function ContactPage() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    if (!api_key || !url) {
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "API key or URL is missing!",
-      });
-      return;
-    }
-
     const formData = new FormData(event.target as HTMLFormElement);
 
-    formData.append("access_key", api_key);
+    formData.append("access_key", `${api_key}`);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const response = await fetch(url, {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,10 +36,6 @@ function ContactPage() {
         text: "Message Sent Successfully!",
         icon: "success",
       });
-
-      setName("");
-      setEmail("");
-      setMessage("");
     } else {
       Swal.fire({
         icon: "error",
