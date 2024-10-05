@@ -148,7 +148,7 @@ export const PROJECT = [
     title: "My Portfolio Website",
     description:
       "My portfolio website is built with Next.js, TypeScript, and Tailwind CSS, showcasing my projects and skills in a beautiful and interactive manner. Leveraging libraries from various platforms, the site provides a seamless user experience, highlighting my work and expertise in web development.",
-    href: "https://Localhost:3000",
+    href: "https://maulanaibnusahban.vercel.app/",
     technologies: [
       { src: "/typescript.svg", key: "typescript", label: "TypeScript" },
       { src: "/react.svg", key: "react", label: "React" },

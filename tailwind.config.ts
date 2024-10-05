@@ -49,7 +49,7 @@ const config = {
         },
       },
       maxWidth: {
-        "10xl": "1512px",
+        "10xl": "1612px",
       },
       width: {
         calc_card: "calc(100% / 3 - 40px)",
