@@ -45,11 +45,11 @@ function About() {
           <Particles className="h-full inset-0 w-full absolute -z-10" />
           <div className="w-full h-full sm:grid sm:grid-cols-2 grid-rows-6 gap-1">
             <div
-              className={`${handjet.className} flex text-nowrap sm:col-span-1 sm:row-span-2 row-span-1 sm:px-9 px-5 py-3 sm:text-[5em] text-[3em] sm:items-end tracking-wider `}
+              className={`${handjet.className} flex text-nowrap sm:col-span-1 sm:row-span-2 row-span-1 sm:px-9 px-5 py-3 sm:text-[5em] text-[3em] sm:items-end tracking-wider`}
+              translate="no"
             >
               Hello <span className="text-cyan-700 sm:ml-5 ml-3">Everyone ;</span>
             </div>
-
             <div className="hidden sm:flex col-span-1 row-span-6 justify-center items-center mb-6">
               <IconCloudDemo />
             </div>
@@ -70,7 +70,7 @@ function About() {
       <div className="w-full mb-20 sm:mt-7 sm:px-20 px-5 ">
         <h1 className={`${handjet.className} text-5xl sm:text-6xl flex gap-3`}>
           Im
-          <span className="text-cyan-700">
+          <span className="text-cyan-700" translate="no">
             <Typewriter text={["Maulana Ibnu S.", "Web Development"]} colorCursor="#0e7490" />
           </span>
         </h1>

@@ -10,7 +10,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function Home() {
   const githubLink = process.env.GITHUB_LINK;
   return (
-    <main className="w-full h-screen md:max-h-[700px] relative cursor-default inset-0">
+    <main className="w-full h-screen md:max-h-[700px] relative cursor-default inset-0" translate="no">
       <div className="flex justify-center flex-col md:mt-8 items-center w-full h-full absolute z-20 gap-6  text-white">
         <div className="max-w-[80vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect

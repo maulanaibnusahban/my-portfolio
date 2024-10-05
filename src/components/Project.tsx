@@ -33,7 +33,7 @@ function ProjectPage() {
           </div>
           <div className="mt-14 w-[85%] flex flex-wrap justify-between gap-10">
             {PROJECT.map((data) => (
-              <div key={data.key} className="sm:w-calc_card" onClick={() => openModal(data)}>
+              <div key={data.key} className="sm:w-calc_card w-calc_social_media_sm" onClick={() => openModal(data)}>
                 <div className="hover:border-cyan-700 border-[2.5px] overflow-hidden hover:scale-105 transition-all rounded-lg cursor-pointer">
                   <Image src={data.src} alt={data.title} width={300} height={150} className="w-full h-auto" />
                   <div className="p-3 text-white backdrop-blur-lg bg-zinc-900 text-start px-4 rounded-b-lg pb-5">
