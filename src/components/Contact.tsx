@@ -5,8 +5,6 @@ import { MeteorDemo } from "./ui/Meteor";
 import "@/app/contact/style.css";
 
 function ContactPage() {
-  const api_key = process.env.KEY_EMAIL;
-
   // State untuk mengontrol nilai input
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,33 +12,52 @@ function ContactPage() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
 
-    formData.append("access_key", `${api_key}`);
+    const formData = {
+      name,
+      email,
+      message,
+    };
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const response = await fetch("/api/sendMessage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: json,
+      body: JSON.stringify(formData),
     });
+
+    // Periksa status respons sebelum mencoba menguraikan
+    if (!response.ok) {
+      const errorMessage = await response.text(); // Mengambil teks untuk debug
+      console.error("Error response:", errorMessage); // Log kesalahan ke console
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong: " + errorMessage,
+      });
+      return;
+    }
+
     const result = await response.json();
+
+    // Periksa hasil dan berikan respons kepada pengguna
     if (result.success) {
       Swal.fire({
         title: "Success!",
         text: "Message Sent Successfully!",
         icon: "success",
       });
+
+      // Reset form setelah sukses
+      setName("");
+      setEmail("");
+      setMessage("");
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Something went wrong!",
+        text: "Failed to send message!",
       });
     }
   }
