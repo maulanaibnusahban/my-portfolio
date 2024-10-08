@@ -29,7 +29,7 @@ function Modal_project({ selectedProject, closeModal }: ModalProjectProps) {
               <p className="mt-3 sm:mt-4 text-sm sm:text-base">{selectedProject.description}</p>
               <div className="mt-4">
                 <h1 className="text-lg text-cyan-700">Live Preview :</h1>
-                <Link href="" className="text-gray-600 underline sm:text-base text-sm hover:text-white">
+                <Link href={selectedProject.href} className="text-gray-600 underline sm:text-base text-sm hover:text-white">
                   {selectedProject.href}
                 </Link>
               </div>

@@ -134,7 +134,7 @@ export const PROJECT = [
     title: "Camp App Promotion Web",
     description:
       "The Camp App Promotion Website effectively showcases our innovative camping application. Built with Next.js, TypeScript, and Tailwind CSS, it offers a modern and responsive design. The website highlights key features and benefits of the app, encouraging users to explore the great outdoors. Its captivating layout ensures an engaging user experience for all visitors.",
-    href: "https://vercel.com/maulana-ibnus-projects/camp-promotion-app",
+    href: "https://app-promotion.vercel.app/",
     technologies: [
       { src: "/typescript.svg", key: "typescript", label: "TypeScript" },
       { src: "/react.svg", key: "react", label: "React" },
@@ -177,7 +177,7 @@ export const PROJECT = [
     title: "Anime Infinity Scroll",
     description:
       "Anime Infinity Scroll is a responsive website built with Next.js, TypeScript, and Tailwind CSS. It features an infinite scroll functionality that loads more anime content seamlessly by fetching data from an external API. Enjoy a dynamic and interactive experience as you explore a vast library of anime titles.",
-    href: "https://vercel.com/maulana-ibnus-projects/anime-infinity-scroll",
+    href: "https://anime-infinity-scroll-dusky.vercel.app/",
     technologies: [
       { src: "/typescript.svg", key: "typescript", label: "TypeScript" },
       { src: "/react.svg", key: "react", label: "React" },
