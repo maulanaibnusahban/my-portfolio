@@ -53,7 +53,8 @@ export const CERTIFICATION = [
     src: "/sertifikat-ai.jpg",
     key: "artificial_intelegence2",
     title: "2nd place in district-level Artificial Intelligence Competition",
-    description: "The competition focuses on the application of artificial intelligence in big data processing and analysis using Python.",
+    description:
+      "The competition focuses on the application of artificial intelligence in big data processing and analysis using Python.",
   },
   {
     src: "/sertifikat-ai3.jpg",
@@ -123,7 +124,7 @@ export const SOCIAL_MEDIA = [
     label: "Linkedin",
     description: "Maulana Ibnu Sahban",
     color: "#007bb5",
-    href: "https://www.linkedin.com/in/maulana-ibnu-sahban-45b202291",
+    href: "https://www.linkedin.com/in/maulanaibnusahban",
   },
 ];
 
@@ -218,7 +219,8 @@ export const SERVICE = [
     src: "code.svg",
     key: "code",
     title: "Web Development",
-    description: "Transform your brand with a stunning, user-friendly website. Experience the ultimate web development experience.",
+    description:
+      "Transform your brand with a stunning, user-friendly website. Experience the ultimate web development experience.",
   },
   {
     src: "docker.svg",
